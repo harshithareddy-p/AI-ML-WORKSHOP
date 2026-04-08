@@ -27,8 +27,15 @@ kmeans.fit(df)
 
 plt.figure(figsize=(7, 5))
 plt.scatter(df['Area'], df['HouseCost'], c=kmeans.labels_, s=80)
-plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1],
-            marker='X', s=200, color='red', label='Centroids')
+plt.scatter(
+    kmeans.cluster_centers_[:, 0],
+    kmeans.cluster_centers_[:, 1],
+    marker='X',
+    s=200,
+    color='red',
+    label='Centroids'
+)
+
 plt.title("K-Means Clustering (K = 3)")
 plt.xlabel("Area")
 plt.ylabel("House Cost")
